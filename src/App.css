@@ -1,0 +1,875 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f6fa;
+}
+
+.login-card {
+  width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h1 {
+  text-align: center;
+  margin: 0 0 10px;
+  color: #222;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #222;
+}
+
+.login-card input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #222;
+}
+
+.login-card button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  background: #222;
+  color: white;
+}
+
+.login-card button:hover {
+  background: #444;
+}
+
+.message {
+  color: #d32f2f;
+  margin-top: 15px;
+}
+
+
+/* =========================
+   REGISTER TEXT
+========================= */
+
+.register-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+}
+
+.register-text span {
+  font-weight: bold;
+  cursor: pointer;
+  color: #222;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.dashboard-header {
+  height: 70px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #222;
+  font-size: 24px;
+}
+
+.dashboard-header button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.dashboard-header button:hover {
+  background: #444;
+}
+
+
+/* =========================
+   DASHBOARD CONTENT
+========================= */
+
+.dashboard-content {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: white;
+  padding: 25px 17px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h2 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: #222;
+}
+
+
+/* =========================
+   SIDEBAR BUTTONS
+========================= */
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 13px 18px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #222;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar button:hover {
+  background: #eeeeee;
+  color: #222;
+}
+
+
+/* =========================
+   ACTIVE SIDEBAR BUTTON
+========================= */
+
+.sidebar button.active {
+  background: #222 !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+.sidebar button.active:hover {
+  background: #222 !important;
+  color: white !important;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+  flex: 1;
+  padding: 35px;
+  overflow-x: auto;
+  color: #222;
+}
+
+.main-content > h1 {
+  margin-top: 0;
+}
+
+
+/* =========================
+   DASHBOARD WELCOME
+========================= */
+
+.dashboard-welcome {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.dashboard-welcome h1 {
+  margin: 0 0 12px;
+  color: #222;
+  font-size: 42px;
+}
+
+.dashboard-welcome p {
+  margin: 0;
+  color: #666;
+  font-size: 20px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.stat-card h3 {
+  margin: 0 0 15px;
+  font-size: 18px;
+  color: #555;
+}
+
+.stat-card p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+}
+
+
+/* =========================
+   QUICK ACTIONS
+========================= */
+
+.dashboard-section {
+  margin-top: 40px;
+}
+
+.dashboard-section h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #222;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  padding: 13px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #666;
+  color: white;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.quick-actions button:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   DASHBOARD GRID
+========================= */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+
+/* =========================
+   DASHBOARD PANEL
+========================= */
+
+.dashboard-panel {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.panel-header h2 {
+  margin: 0;
+  color: #222;
+  font-size: 20px;
+}
+
+.panel-header button {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.panel-header button:hover {
+  background: #444;
+}
+
+
+/* =========================
+   DASHBOARD TABLE
+========================= */
+
+.dashboard-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.dashboard-table th {
+  background: #f8f8f8;
+  color: #222;
+  font-weight: bold;
+}
+
+.dashboard-table td {
+  color: #444;
+}
+
+
+/* =========================
+   ATTENDANCE STATUS
+========================= */
+
+.status-present {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.status-absent {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+
+/* =========================
+   SUBSCRIPTION LIST
+========================= */
+
+.subscription-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.subscription-item:last-child {
+  border-bottom: none;
+}
+
+.subscription-item strong {
+  color: #222;
+}
+
+.subscription-item p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+.status-active {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.empty-text {
+  color: #777;
+}
+
+
+/* =========================
+   BACK TO DASHBOARD
+========================= */
+
+.back-button {
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: #222;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: #eeeeee;
+}
+
+
+/* =========================
+   MEMBERS HEADER
+========================= */
+
+.members-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.members-header h2 {
+  margin: 0;
+  color: #222;
+}
+
+.members-header p {
+  margin-top: 5px;
+  color: #666;
+}
+
+.members-header button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.members-header button:hover {
+  background: #444;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 625px;
+  padding: 13px 15px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+  background: white;
+}
+
+.search-box input:focus {
+  border-color: #777;
+}
+
+
+/* =========================
+   MEMBER FORM
+========================= */
+
+.member-form {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+}
+
+.member-form h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.member-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-form label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #222;
+}
+
+.member-form input,
+.member-form select {
+  padding: 11px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+.member-form input:focus,
+.member-form select:focus {
+  border-color: #777;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.form-buttons button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+.form-buttons button:hover {
+  background: #444;
+}
+
+
+/* =========================
+   MEMBER LIST
+========================= */
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.member-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.member-card h3 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+.member-card p {
+  margin: 9px 0;
+}
+
+
+/* =========================
+   MEMBER ACTIONS
+========================= */
+
+.member-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.member-actions button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #666;
+  color: white;
+}
+
+.member-actions button:hover {
+  background: #444;
+}
+
+
+/* =========================
+   MEMBERS TABLE
+========================= */
+
+.members-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.members-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.members-table th,
+.members-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.members-table th {
+  background: #f8f8f8;
+  color: #222;
+  font-weight: bold;
+}
+
+.members-table td {
+  color: #222;
+}
+
+.members-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.members-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================
+   TABLE ACTIONS
+========================= */
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-actions button {
+  padding: 8px 13px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #666;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.table-actions button:hover {
+  background: #444;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .member-list {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar button {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 90%;
+  }
+
+  .members-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .members-header button {
+    width: 100%;
+  }
+
+  .search-box input {
+    max-width: 100%;
+  }
+
+  .dashboard-welcome h1 {
+    font-size: 32px;
+  }
+
+  .dashboard-welcome p {
+    font-size: 16px;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+  }
+
+  .quick-actions button {
+    width: 100%;
+  }
+}
+/* =========================
+   REFRESH DASHBOARD
+========================= */
+
+.refresh-dashboard {
+  margin-top: 20px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 7px;
+  background: #222;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.refresh-dashboard:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+/* =========================
+   REFRESH DASHBOARD LOADING
+========================= */
+
+.refresh-dashboard:disabled {
+  background: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+/* =========================
+   DASHBOARD ERROR
+========================= */
+
+.dashboard-error {
+  margin: 20px auto;
+  padding: 14px 18px;
+  max-width: 700px;
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
